@@ -1,11 +1,11 @@
 import React from "react";
 
-export function Layout(){
+function Layout(){
     return(
         <section>
-            <header>
-                sdcsdc
-            </header>
+            <header>scascasc</header>
         </section>
     )
 }
+
+export default Layout;

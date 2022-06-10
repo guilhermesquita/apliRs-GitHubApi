@@ -1,7 +1,9 @@
 import axios from "axios";
 
-export const api = axios.create({
+const Api = axios.create({
     baseURL: 'https://api.github.com',
 });
 
 api.get('users/guilhermesquita')
+
+export default Api

@@ -1,14 +1,17 @@
-import React from "react"
-import { Layout } from "./components/layout/Index"
+import React from "react";
+import Layout from "./components/layout/Index";
 
-export function App() {
+
+function App() {
   return(
-  
-  <main>
-      <Layout/>
-  </main>
+
+    <div>
+      <Layout />
+    </div>
   
   )
 }
+
+export default App
 
 
