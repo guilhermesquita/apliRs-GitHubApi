@@ -1,7 +1,14 @@
 import React from "react"
+import { Layout } from "./components/layout/Index"
 
 export function App() {
-  return <div className="App">GitHub api</div>
+  return(
+  
+  <main>
+      <Layout/>
+  </main>
+  
+  )
 }
 
 
