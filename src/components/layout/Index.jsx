@@ -2,9 +2,8 @@ import React from "react";
 
 function Layout(){
     return(
-        <section>
-            <header>scascasc</header>
-        </section>
+            <header></header>
+        
     )
 }
 
