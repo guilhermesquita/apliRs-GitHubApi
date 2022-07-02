@@ -1,34 +1,31 @@
 import React from "react";
-import Layout from "./components/layout/Index";
+import Layout from "./components/layout";
+import NoSearch from "./components/no-search";
+import Profile from "./components/profile";
+import Repositories from "./components/repositories";
+import useGithub from "./hooks/github-hooks";
 
-
-function App() {
+const App = () => {
+  const { githubState } = useGithub();
   return (
-    <main>
-   
-        <div>
-        
-          <img src="https://avatars.githubusercontent.com/u/52768525?v=4" alt="Picture of user"/>
-          <h1>Guilherme Mesquita</h1>
-          <h3>Username: </h3>
-          <span>guilhermesquita</span>
-          
-          <div>
-            <div></div>
-            <h4>Followers</h4>
-            <span>6</span>
-          </div>
-        
-        </div> 
+    <Layout>
+      {githubState.hasUser ? (
+        <>
+          {githubState.loading ? (
+            <p>Loading</p>
+          ) : (
+            <>
+              <Profile />
+              <Repositories />
+            </>
+          )}
+        </>
+      ) : (
+        <NoSearch />
+      )}
+    </Layout>
+  );
+};
 
-
-        <div>repositories</div>
-        <div>Starreds</div>
- 
-    </main>
-  )
-}
-
-export default App
-
+export default App;
 
